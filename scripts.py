@@ -77,17 +77,3 @@ def get_schoolkid(name):
 def get_schoolkid(name):
     kid = Schoolkid.objects.filter(full_name__contains=name).get()
     return kid
-
-
-name = 'Фролов Иван'
-kid = get_schoolkid(name)
-title = 'Музыка'
-create_commendation(kid, title)
-remove_chastisements(kid)
-fix_marks(kid)
-print('x')
-
-
-# commendations = Commendation.objects.filter(schoolkid=kid)
-# commendations.delete()
-from scripts import get_schoolkid, create_commendation, remove_chastisements, fix_marks
