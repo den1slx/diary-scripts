@@ -1,6 +1,7 @@
 from datacenter.models import Schoolkid, Mark, Chastisement, Lesson, Commendation
 from random import choice
 
+
 PRAISE = [
     'Молодец!',
     'Отлично!',
@@ -36,10 +37,7 @@ PRAISE = [
 
 
 def fix_marks(schoolkid):
-    marks = Mark.objects.filter(schoolkid=schoolkid, points__lt=4)
-    for point in marks:
-        point.points = 5
-        point.save()
+    Mark.objects.filter(schoolkid=schoolkid, points__lt=4).update(points=5)
 
 
 def remove_chastisements(schoolkid):
