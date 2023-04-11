@@ -2,7 +2,7 @@ from datacenter.models import Schoolkid, Mark, Chastisement, Lesson, Commendatio
 from random import choice
 
 
-PRAISE = [
+PRAISES = [
     'Молодец!',
     'Отлично!',
     'Хорошо!',
