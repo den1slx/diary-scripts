@@ -58,7 +58,7 @@ def create_commendation(schoolkid, title):
     commendation = Commendation.objects.filter(schoolkid=schoolkid, created=lesson.date, subject__title=title)
     if not commendation:
         Commendation.objects.create(
-            text=choice(PRAISE),
+            text=choice(PRAISES),
             created=lesson.date,
             schoolkid=schoolkid,
             subject=lesson.subject,
